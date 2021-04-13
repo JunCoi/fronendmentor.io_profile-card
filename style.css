@@ -1,0 +1,112 @@
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--dark-cyan);
+  background-image: url(./images/bg-pattern-top.svg),
+    url(./images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: top -350px left -100px, right -150px bottom -400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 22.125rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  line-height: 2;
+}
+
+.patterm-img {
+  height: 8.75rem;
+  width: 100%;
+  background-image: url(./images/bg-pattern-card.svg);
+}
+
+.profile {
+  transform: translateY(-48px);
+  text-align: center;
+  width: 100%;
+}
+
+.profile img {
+  border: 6px solid white;
+  border-radius: 50%;
+}
+
+.name-add {
+  padding-top: 2em;
+}
+
+.name-add p {
+  color: var(--dark-grayish-blue);
+}
+
+.name-add > p:first-child {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--very-dark-blue);
+}
+
+.name-add > p:first-child span {
+  font-weight: 400;
+  color: var(--dark-grayish-blue);
+  padding-left: 5px;
+}
+
+.stats {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  justify-content: space-around;
+  border-top: 1px solid var(--dark-gray);
+  padding-top: 1.75em;
+  padding-bottom: 1em;
+  transform: translateY(32px);
+}
+
+.wrap > p:first-child {
+  font-weight: 700;
+  color: var(--very-dark-blue);
+}
+
+.wrap > p:last-child {
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--dark-grayish-blue);
+  line-height: 1;
+}
+
+@media (max-width: 375px) {
+  .container {
+    background-size: 100%;
+    background-position: top -200px left -200px, bottom -200px right -200px;
+  }
+
+  .card {
+    width: 80vw;
+  }
+}
